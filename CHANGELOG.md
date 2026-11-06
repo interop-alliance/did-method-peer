@@ -1,6 +1,6 @@
 # @interop/did-method-peer Changelog
 
-## 0.1.0 - TBD
+## 0.1.0 - 2026-11-06
 
 ### Added
 
