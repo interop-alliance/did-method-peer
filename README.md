@@ -1,10 +1,11 @@
-# did:peer numalgo 4 driver _(@interop/did-method-peer)_
+# did:peer:4 (numalgo 4) driver _(@interop/did-method-peer)_
 
 [![Node.js CI](https://github.com/interop-alliance/did-method-peer/workflows/CI/badge.svg)](https://github.com/interop-alliance/did-method-peer/actions?query=workflow%3A%22CI%22)
 [![NPM Version](https://img.shields.io/npm/v/@interop/did-method-peer.svg)](https://npm.im/@interop/did-method-peer)
 
-> A `did:peer` numalgo 4 codec and driver for `@interop/did-io`, for use in the
-> browser, Node.js, and React Native.
+> A [`did:peer`](https://identity.foundation/peer-did-method-spec/) numalgo 4
+> codec and driver for `@interop/did-io`, for use in the browser, Node.js, and
+> React Native.
 
 ## Table of Contents
 
@@ -18,9 +19,10 @@
 ## Background
 
 The [peer DID method](https://identity.foundation/peer-did-method-spec/) defines
-several algorithms, called numalgos. Numalgo 4 is the current one. It is
-statically resolvable. The DID carries everything needed to resolve it, and no
-registry or network is involved.
+several algorithms, called numalgos.
+[Numalgo 4](https://identity.foundation/peer-did-method-spec/#method-4-short-form-and-long-form)
+is the current one. It is statically resolvable. The DID carries everything
+needed to resolve it, and no registry or network is involved.
 
 A numalgo 4 DID starts from an input document. The input document looks like the
 eventual DID document with four differences:
