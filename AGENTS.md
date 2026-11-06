@@ -79,7 +79,7 @@ structured work items. Never create a parallel task list elsewhere (no
 
 Each work item follows this schema:
 
-- A heading `### ILT-N: Title`, then a field block, then free prose context.
+- A heading `### DMP-N: Title`, then a field block, then free prose context.
 - The prose opens with a `Context:` paragraph: a few plain-language sentences
   stating what is wrong today, how it came about, and why it matters, readable
   on its own without following any file pointer. The detailed mechanics
@@ -91,7 +91,7 @@ Each work item follows this schema:
   touched, not in bulk.
 - Fields: `status` (`todo` / `in-progress` / `draft` / `done`), `priority`
   (`high` / `medium` / `low`), `labels` (comma-separated), optional `blocked-by`
-  (other `ILT-N` ids), a `touches:` list where the rule below applies,
+  (other `DMP-N` ids), a `touches:` list where the rule below applies,
   `design:` + `design-approved:` where the design gate below applies, and an
   `acceptance:` checklist.
 - `draft` marks items with no actionable done-state yet (blocked externally or
@@ -125,11 +125,11 @@ Rules:
 - Completed items move **verbatim** (number, title, field block, prose, with
   their `done` date) from ROADMAP.md to
   [archived-roadmap.md](./archived-roadmap.md) once shipped, append-only -- this
-  keeps ILT-N references resolvable. CHANGELOG.md remains the permanent record
+  keeps DMP-N references resolvable. CHANGELOG.md remains the permanent record
   of what landed. Do not rewrite or summarize items on the way in, and do not
   fix old references.
 - Work discovered mid-implementation gets its own item immediately, noting
-  `discovered-from: ILT-N` in its prose, plus a `blocked-by` link if it blocks
+  `discovered-from: DMP-N` in its prose, plus a `blocked-by` link if it blocks
   anything.
 - **The design gate**: a cross-cutting item (one that changes persistence
   semantics, key custody, a ceremony's stage order, or any invariant the repo's

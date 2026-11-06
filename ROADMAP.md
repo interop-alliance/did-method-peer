@@ -1,18 +1,18 @@
-# Isomorphic Lib Template Roadmap (open items)
+# @interop/did-method-peer Roadmap (open items)
 
-nextAvailableId: 1
+nextAvailableId: 2
 
-Status as of 2026-07-23. Uses the formalized item structure shared with the
+Status as of 2026-11-05. Uses the formalized item structure shared with the
 freewallet and was-teaching-server roadmaps.
 
 Scope: open work items only. This document tracks the **remaining** items;
 completed items move verbatim to [archived-roadmap.md](archived-roadmap.md) as
-they land, so ILT-N references keep resolving (CHANGELOG.md remains the record
+they land, so DMP-N references keep resolving (CHANGELOG.md remains the record
 of what landed).
 
 ## Item format
 
-Each work item is a `### ILT-N: Title` heading followed by a field block and
+Each work item is a `### DMP-N: Title` heading followed by a field block and
 free prose context. Ids are permanent and never reused. The `nextAvailableId`
 line at the top of this file is the next id to take: filing an item takes that
 number and rewrites the line to one higher, in the same edit. Never derive the

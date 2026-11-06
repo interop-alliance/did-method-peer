@@ -1,7 +1,7 @@
 {
-  "name": "@interop/isomorphic-lib-template",
-  "description": "A Typescript/Javascript isomorphic library template, for use in the browser, Node.js, and React Native.",
-  "version": "0.0.1",
+  "name": "@interop/did-method-peer",
+  "description": "A did:peer (numalgo 4) DID method driver for @interop/did-io: long and short form codec, DID document generation and resolution, for the browser, Node.js, and React Native.",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
     "build": "pnpm run clear && tsc",
@@ -29,6 +29,12 @@
       "react-native": "./dist/index.js",
       "import": "./dist/index.js",
       "default": "./dist/index.js"
+    },
+    "./codec": {
+      "types": "./dist/codec.d.ts",
+      "react-native": "./dist/codec.js",
+      "import": "./dist/codec.js",
+      "default": "./dist/codec.js"
     }
   },
   "module": "dist/index.js",
@@ -36,9 +42,20 @@
   "types": "dist/index.d.ts",
   "sideEffects": false,
   "dependencies": {
+    "@interop/bnid": "^6.0.2",
+    "@interop/data-integrity-core": "^8.10.0",
+    "@interop/did-io": "^4.3.0",
+    "@interop/x25519-key-agreement-key": "^5.4.3",
+    "@noble/hashes": "^2.2.0",
+    "@scure/base": "^2.2.0"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@interop/ed25519-signature": "^7.2.5",
+    "@interop/ed25519-verification-key": "^8.2.2",
+    "@interop/jsonld-signatures": "^11.9.0",
+    "@interop/security-document-loader": "^10.1.6",
+    "@interop/zcap": "^11.4.0",
     "@playwright/test": "^1.60.0",
     "@types/node": "^26.0.1",
     "@vitest/coverage-v8": "^4.1.7",
@@ -57,6 +74,10 @@
     "provenance": true
   },
   "keywords": [
+    "did",
+    "did:peer",
+    "didcomm",
+    "did-io",
     "isomorphic"
   ],
   "packageManager": "pnpm@11.5.0",
@@ -70,8 +91,8 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/interop-alliance/isomorphic-lib-template.git"
+    "url": "git+https://github.com/interop-alliance/did-method-peer.git"
   },
-  "homepage": "https://github.com/interop-alliance/isomorphic-lib-template",
-  "bugs": "https://github.com/interop-alliance/isomorphic-lib-template/issues"
+  "homepage": "https://github.com/interop-alliance/did-method-peer",
+  "bugs": "https://github.com/interop-alliance/did-method-peer/issues"
 }

@@ -1,0 +1,32 @@
+{
+  "description": "generate({ seed }) with the Ed25519 suite registered and no key agreement derivation. The seed and key come from the did-web-resolver README.",
+  "seed": "z1AhV1bADy7RepJ64mvH7Kk7htFNGc7EA1WA5nGzLSTWc6o",
+  "publicKeyMultibase": "z6MkmDMjfkjs9XPCN1LfoQQRHz1mJ8PEdiVYC66XKhj3wGyB",
+  "inputDocument": {
+    "@context": [
+      "https://www.w3.org/ns/did/v1",
+      "https://w3id.org/security/multikey/v1"
+    ],
+    "verificationMethod": [
+      {
+        "type": "Multikey",
+        "publicKeyMultibase": "z6MkmDMjfkjs9XPCN1LfoQQRHz1mJ8PEdiVYC66XKhj3wGyB",
+        "id": "#z6MkmDMjfkjs9XPCN1LfoQQRHz1mJ8PEdiVYC66XKhj3wGyB"
+      }
+    ],
+    "authentication": [
+      "#z6MkmDMjfkjs9XPCN1LfoQQRHz1mJ8PEdiVYC66XKhj3wGyB"
+    ],
+    "assertionMethod": [
+      "#z6MkmDMjfkjs9XPCN1LfoQQRHz1mJ8PEdiVYC66XKhj3wGyB"
+    ],
+    "capabilityDelegation": [
+      "#z6MkmDMjfkjs9XPCN1LfoQQRHz1mJ8PEdiVYC66XKhj3wGyB"
+    ],
+    "capabilityInvocation": [
+      "#z6MkmDMjfkjs9XPCN1LfoQQRHz1mJ8PEdiVYC66XKhj3wGyB"
+    ]
+  },
+  "longForm": "did:peer:4zQmQ5jejTFZkEghmA22syceDJC54TN5Z1gZEWXeq3BsZhek:z2jUBrzvgRbAHneemuzFbouixhZmPKBkeoKZUbsuFb6v6JG6mtJRiMsXtrz6KUV59wUa35fNbYLwxx7vAf5BVTqzaG989V3yvpry4EQuhd1Cxnb74GSr2qmp9hFdKH7DPvJ1zL4NBt1NEwfmfXZCWKpbMJsxR1UtDns7TMg6sjf6DCKC9bpaPmduoWMfgiRHYZV5PbDSvVyESzsNpJ5qNytgNzQvE8fV7Uysm5PQZc487JNqFA5T27m4AgpjW1gFNxtv1ZS5jRRzk6GpVRz9Phcr6ywmhE88uwVXDCS4JojCgCFMQVj6jxovdGAdTKg5RfrFZJ6CXrA72SE335sta6B9JNZzTntE9kPNZ2MqYXUcUXaYanGsAnayV5BuHB37WfAmzzuQN1QENdKmivRs9pp39jNBCyPj3jhh2VhPgCwDm8kuqSj5hWGKA4SUvc84pqHzb58HEyYN9UfHkzzbX5CazC2rRuFZfTsYCPhvjoknLRQ2qU9FtHRWWPEqoJ5XVqMEQEmh6VMBp637z3T9bqD9wYkngpCfVGgfz5Duze2JrtCefwJfbsDPbWT19M6SEDv5EMHS7DKJGTC3oqggKT2k8MYt498nHzdJUwwKpUwSnJ4HBPmc7qbCg81tybd2hTFg52q9PdFME9g7K1MPYUptZ6SNrYwBaVTvgLd7MTPc6P9v4bCLbd6kcRd789brQ6u5P4HJrnTBrFK2xmYv81BVgRiaGHDCy1VFEScmTomuwUKzKZoPD59bA",
+  "shortForm": "did:peer:4zQmQ5jejTFZkEghmA22syceDJC54TN5Z1gZEWXeq3BsZhek"
+}
