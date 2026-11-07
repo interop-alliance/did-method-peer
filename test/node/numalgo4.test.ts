@@ -247,6 +247,27 @@ describe('numalgo 4 codec', () => {
       )
     })
 
+    it('rejects malformed multicodec prefixes (Credo negative matrix)', () => {
+      // The four payloads from credo-ts peerDidNumAlgo4.test.ts: a varint of
+      // continuation bytes only, the neighbouring codec 0x0201, the json codec
+      // with no payload, and a non-minimal varint encoding of 0x0200. Each is
+      // wrapped in a hash-valid long form so only the prefix check can fail.
+      const text = (value: string) => new TextEncoder().encode(value)
+      const payloads = [
+        new Uint8Array([0x80, 0x80, 0x80, 0x80, 0x80, 0x80]),
+        new Uint8Array([0x81, 0x04, ...text('{}')]),
+        new Uint8Array([0x80, 0x04]),
+        new Uint8Array([0x80, 0x84, 0x00, ...text('{}')])
+      ]
+      for (const payload of payloads) {
+        const encoded = 'z' + base58.encode(payload)
+        const digest = sha256(text(encoded))
+        const hash =
+          'z' + base58.encode(new Uint8Array([0x12, 0x20, ...digest]))
+        expectInvalidDid(() => decode({ did: `did:peer:4${hash}:${encoded}` }))
+      }
+    })
+
     it('rejects a long form over MAX_LONG_FORM_LENGTH before decoding', () => {
       // Syntactically valid, hash-invalid, one character over the limit: the
       // length check must fire before the hash check does.
